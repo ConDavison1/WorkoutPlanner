@@ -1,6 +1,6 @@
 "use client";
 
-import Link from 'next/link'; // Next.js Link for navigation
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
           href="/workouts" // Link to your Workouts page
           className="px-6 py-3 bg-purple-800 rounded text-white text-lg hover:bg-purple-600 transition duration-200"
         >
-          Start Searching Workouts
+          Search For Workout Ideas
         </Link>
       </div>
     </div>
