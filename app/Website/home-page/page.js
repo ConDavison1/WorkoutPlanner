@@ -2,14 +2,16 @@
 
 import Link from "next/link";
 import { useUserAuth } from "../_utils/auth-context";
+import { useRouter } from 'next/navigation';
 
 export default function Main() {
     const { user, firebaseSignOut } = useUserAuth();
+    const router = useRouter(); // Initialize router
 
     async function handleSignOut() {
         try {
             await firebaseSignOut();
-            window.location.href = "/Website";
+            router.push("/Website"); // Use router.push for smooth navigation
         } catch (error) {
             console.log(error);
         }
@@ -18,7 +20,6 @@ export default function Main() {
     return (
         <div className="flex justify-center items-center h-screen bg-gradient-to-r from-grey-500 to-white-500 text-[#ffffff]">
             <div className="text-center p-8">
-
                 <img
                     src="../../assets/Fitquest.png"
                     alt="FitQuest Logo"
@@ -48,7 +49,6 @@ export default function Main() {
                             Plan Your Workouts
                         </Link>
                         <div>
-
                             <button
                                 onClick={handleSignOut}
                                 className="px-6 m-10 py-3 bg-[#521573] rounded font-bold text-[#ffffff] text-lg hover:bg-[#351242] transition duration-200"
