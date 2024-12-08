@@ -2,16 +2,16 @@
 
 import { useUserAuth } from "./_utils/auth-context";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation"; // Correct import for next/navigation in app dir
+import { useRouter } from "next/navigation";
 
 export default function SignInPage() {
     const { user, gitHubSignIn } = useUserAuth();
-    const [isClient, setIsClient] = useState(false); // Flag to ensure client-side rendering
-    const router = useRouter(); // Initialize router
+    const [isClient, setIsClient] = useState(false);
+    const router = useRouter();
 
-    // Only enable client-side features after the component has mounted
+
     useEffect(() => {
-        setIsClient(true); // After the component mounts, set it to client-side
+        setIsClient(true);
     }, []);
 
     async function handleSignIn() {
@@ -23,14 +23,14 @@ export default function SignInPage() {
     }
 
     useEffect(() => {
-        // Ensure navigation only happens on client side
+
         if (user && isClient) {
-            router.push("/Website/home-page"); // Redirect user if authenticated
+            router.push("/Website/home-page");
         }
     }, [user, isClient, router]);
 
     if (!isClient) {
-        return null; // Don't render anything on the server (i.e., no SSR issues)
+        return null;
     }
 
     return (
@@ -39,7 +39,7 @@ export default function SignInPage() {
                 <h1 className="text-5xl font-bold mb-6">Please Login</h1>
                 {user ? (
                     <div>
-                        {/* Optionally show loading or user info here */}
+
                     </div>
                 ) : (
                     <div>
