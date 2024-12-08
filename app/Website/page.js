@@ -45,7 +45,7 @@ export default function SignInPage() {
                     <div>
                         <button
                             onClick={handleSignIn}
-                            className="px-6 py-3 bg-blue-600 rounded text-white text-lg hover:bg-blue-500 transition duration-200"
+                            className="px-6 py-3 bg-purple-800 rounded text-white text-lg hover:bg-purple-600 transition duration-200"
                         >
                             Login with GitHub
                         </button>

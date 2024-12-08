@@ -6,12 +6,12 @@ import { useRouter } from 'next/navigation';
 
 export default function Main() {
     const { user, firebaseSignOut } = useUserAuth();
-    const router = useRouter(); // Initialize router
+    const router = useRouter();
 
     async function handleSignOut() {
         try {
             await firebaseSignOut();
-            router.push("/Website"); // Use router.push for smooth navigation
+            router.push("/Website");
         } catch (error) {
             console.log(error);
         }
