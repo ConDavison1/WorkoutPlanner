@@ -74,7 +74,9 @@ export default function PlanWorkouts() {
     return (
         <div className="flex justify-center items-center h-screen text-white">
             <div className="text-center p-8">
-                <header className="fixed top-0 left-0 w-full p-4 bg-gradient-to-r from-[#5d2768] to-[#8005b5] flex justify-between items-center text-white shadow-md z-10">
+                <header
+                    className="fixed top-0 left-0 w-full p-4 bg-gradient-to-r from-[#5d2768] to-[#8005b5] flex justify-between items-center text-white shadow-md z-10"
+                >
                     <Link href="/Website/home-page" className="text-white text-xl font-bold">
                         Home
                     </Link>
@@ -87,8 +89,6 @@ export default function PlanWorkouts() {
                     <Link href="/Website/plan-workout" className="text-white text-xl font-bold">
                         Plan
                     </Link>
-
-
                 </header>
 
                 <h1 className="pt-20 text-5xl font-bold mb-6 mt-16">Plan Your Workouts</h1>
