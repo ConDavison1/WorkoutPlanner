@@ -1,12 +1,12 @@
 "use client";
 
-
 import { useUserAuth } from "./_utils/auth-context";
 import { useEffect } from "react";
+import { useRouter } from 'next/router'; // For Next.js
 
 export default function SignInPage() {
-    const { user, gitHubSignIn, } = useUserAuth();
-
+    const { user, gitHubSignIn } = useUserAuth();
+    const router = useRouter(); // Initialize router
 
     async function handleSignIn() {
         try {
@@ -16,15 +16,11 @@ export default function SignInPage() {
         }
     }
 
-
-
-
-
     useEffect(() => {
         if (user) {
-            window.location.href = "/Website/home-page";
+            router.push("/Website/home-page");
         }
-    }, [user]);
+    }, [user, router]);
 
     return (
         <div className="flex justify-center items-center h-screen bg-gradient-to-r from-purple-500 to-pink-500 text-white">
@@ -45,6 +41,6 @@ export default function SignInPage() {
                     </div>
                 )}
             </div>
-        </div >
+        </div>
     );
 }
