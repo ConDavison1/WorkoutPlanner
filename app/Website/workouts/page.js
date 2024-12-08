@@ -12,7 +12,7 @@ const WorkoutsPage = () => {
     const exercisesPerPage = 12;
     const [selectedExercise, setSelectedExercise] = useState(null);
 
-    // Fetching the exercises from the API using fetch
+
     useEffect(() => {
         const fetchExercises = async () => {
             try {
@@ -35,12 +35,12 @@ const WorkoutsPage = () => {
         fetchExercises();
     }, []);
 
-    // Filtering the exercises based on the user's search
+
     const filteredExercises = exercises.filter((exercise) =>
         exercise.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    // Pagination logic
+
     const indexOfLastExercise = currentPage * exercisesPerPage;
     const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
     const currentExercises = filteredExercises.slice(
@@ -48,7 +48,7 @@ const WorkoutsPage = () => {
         indexOfLastExercise
     );
 
-    // Page navigation functions
+
     const nextPage = () => {
         if (currentPage < Math.ceil(filteredExercises.length / exercisesPerPage)) {
             setCurrentPage(currentPage + 1);
@@ -61,7 +61,7 @@ const WorkoutsPage = () => {
         }
     };
 
-    // Function to display the instructions when an exercise is clicked
+
     const handleExerciseClick = (exercise) => {
         if (selectedExercise && selectedExercise.id === exercise.id) {
             setSelectedExercise(null);
@@ -71,10 +71,18 @@ const WorkoutsPage = () => {
     };
 
     return (
-        <div className="p-8 font-sans">
-            <header className="flex justify-between items-center mb-8 border-t-5 border-b-5 w-full p-4 bg-gradient-to-r from-[#583a9f] to-[#b35385]">
-                <Link href="/" className="text-white text-xl font-bold">
+        <div className="pt-20 font-sans">
+            <header
+                className="fixed top-0 left-0 w-full p-4 bg-gradient-to-r from-[#5d2768] to-[#8005b5] flex justify-between items-center text-white shadow-md z-10"
+            >
+                <Link href="/Website/home-page" className="text-white text-xl font-bold">
                     Home
+                </Link>
+                <Link href="/Website/view-workout" className="text-white text-xl font-bold">
+                    My Workouts
+                </Link>
+                <Link href="/Website/plan-workout" className="text-white text-xl font-bold">
+                    Plan Workouts
                 </Link>
             </header>
 
@@ -84,7 +92,7 @@ const WorkoutsPage = () => {
                 placeholder="Search for an exercise..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full p-2 border border-white-300 rounded mb-6 text-white bg-gradient-to-r from-[#583a9f] to-[#b35385]"
+                className="w-full p-2 border border-white-300 rounded mb-6 text-white bg-gradient-to-r from-[#5d2768] to-[#8005b5]"
             />
 
             {loading && <p>Loading exercises...</p>}
@@ -94,7 +102,7 @@ const WorkoutsPage = () => {
                 {currentExercises.map((exercise) => (
                     <div
                         key={exercise.id}
-                        className={`p-5 border bg-[#5e136a] text-white border-gray-200 rounded shadow cursor-pointer ${selectedExercise && selectedExercise.id === exercise.id ? "h-auto" : "h-64"
+                        className={`p-5 border bg-gradient-to-r from-[#5d2768] to-[#8005b5] text-white border-gray-200 rounded shadow cursor-pointer ${selectedExercise && selectedExercise.id === exercise.id ? "h-auto" : "h-64"
                             }`}
                         onClick={() => handleExerciseClick(exercise)}
                     >
@@ -140,14 +148,14 @@ const WorkoutsPage = () => {
                 <button
                     onClick={prevPage}
                     disabled={currentPage === 1}
-                    className="px-4 py-2 bg-[#5e136a] text-white rounded"
+                    className="px-4 py-2 bg-[#5e136a] text-white rounded mb-5 ml-40"
                 >
                     Previous
                 </button>
                 <button
                     onClick={nextPage}
                     disabled={currentPage === Math.ceil(filteredExercises.length / exercisesPerPage)}
-                    className="px-4 py-2 bg-[#5e136a] text-white rounded"
+                    className="px-4 py-2 bg-[#5e136a] text-white rounded mb-5 mr-40"
                 >
                     Next
                 </button>
