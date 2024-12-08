@@ -34,7 +34,7 @@ export default function SignInPage() {
     }
 
     return (
-        <div className="flex justify-center items-center h-screen bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+        <div className="flex justify-center items-center h-screen linear-gradient(to right, #6b46c1, #f472b6) text-white">
             <div className="text-center p-8">
                 <h1 className="text-5xl font-bold mb-6">Please Login</h1>
                 {user ? (
