@@ -79,10 +79,13 @@ const WorkoutsPage = () => {
                     Home
                 </Link>
                 <Link href="/Website/view-workout" className="text-white text-xl font-bold">
-                    My Workouts
+                    View
+                </Link>
+                <Link href="/Website/workouts" className="text-white text-xl font-bold">
+                    Search
                 </Link>
                 <Link href="/Website/plan-workout" className="text-white text-xl font-bold">
-                    Plan Workouts
+                    Plan
                 </Link>
             </header>
 

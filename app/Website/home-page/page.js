@@ -30,23 +30,17 @@ export default function Main() {
 
                 {user ? (
                     <div>
-                        <Link
-                            href="/Website/workouts"
-                            className="px-6 m-5 py-3 bg-[#521573] rounded font-bold text-[#ffffff] text-lg hover:bg-[#351242] transition duration-200"
-                        >
-                            Search For Workouts
+                        <Link href="/Website/home-page" className="text-white text-xl font-bold">
+                            Home
                         </Link>
-                        <Link
-                            href="/Website/view-workout"
-                            className="px-6 m-5 py-3 bg-[#521573] rounded font-bold text-[#ffffff] text-lg hover:bg-[#351242] transition duration-200"
-                        >
-                            View Your Workouts
+                        <Link href="/Website/view-workout" className="text-white text-xl font-bold">
+                            View
                         </Link>
-                        <Link
-                            href="/Website/plan-workout"
-                            className="px-6 m-5 py-3 bg-[#521573] rounded font-bold text-[#ffffff] text-lg hover:bg-[#351242] transition duration-200"
-                        >
-                            Plan Your Workouts
+                        <Link href="/Website/workouts" className="text-white text-xl font-bold">
+                            Search
+                        </Link>
+                        <Link href="/Website/plan-workout" className="text-white text-xl font-bold">
+                            Plan
                         </Link>
                         <div>
                             <button

@@ -50,11 +50,14 @@ export default function ViewWorkout() {
                     <Link href="/Website/home-page" className="text-white text-xl font-bold">
                         Home
                     </Link>
-                    <Link href="/Website/plan-workout" className="text-white text-xl font-bold">
-                        Plan Workouts
+                    <Link href="/Website/view-workout" className="text-white text-xl font-bold">
+                        View
                     </Link>
                     <Link href="/Website/workouts" className="text-white text-xl font-bold">
-                        Search Workouts
+                        Search
+                    </Link>
+                    <Link href="/Website/plan-workout" className="text-white text-xl font-bold">
+                        Plan
                     </Link>
                 </header>
 
