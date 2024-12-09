@@ -36,7 +36,12 @@ export default function SignInPage() {
     return (
         <div className="flex justify-center items-center h-screen bg-gradient-to-r from-[#000000] to-[#353435] text-white">
             <div className="text-center p-8">
-                <h1 className="text-5xl font-bold mb-6">Please Login</h1>
+                <img
+                    src="../assets/Fitquest.png"
+                    alt="FitQuest Logo"
+                    className="mx-auto mb-8 w-32 h-auto rounded-full"
+                />
+
                 {user ? (
                     <div>
 
