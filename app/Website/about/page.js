@@ -33,7 +33,7 @@ export default function About() {
                     Users can sign up, log in, and authenticate using their GitHub account. The app provides a user-friendly
                     interface with interactive features that make it easy to track your workout routines, plan goals, and see progress over time.
                 </p>
-                <p className="text-xl mb-6 font-bold">This app was created by Connor Davison</p>
+                <p className="text-xl mb-6 font-bold">This Website was created by Connor Davison</p>
             </div>
         </div>
     );
