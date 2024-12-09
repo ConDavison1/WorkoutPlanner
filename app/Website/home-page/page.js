@@ -48,6 +48,12 @@ export default function Main() {
                         >
                             Plan Your Workouts
                         </Link>
+                        <Link
+                            href="/Website/about"
+                            className="px-6 m-5 py-3 bg-[#521573] rounded font-bold text-[#ffffff] text-lg hover:bg-[#351242] transition duration-200"
+                        >
+                            About
+                        </Link>
                         <div>
                             <button
                                 onClick={handleSignOut}

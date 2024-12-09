@@ -95,7 +95,7 @@ const WorkoutsPage = () => {
                 placeholder="Search for an exercise..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full p-2 border border-white-300 rounded mb-6 text-white bg-gradient-to-r from-[#5d2768] to-[#8005b5]"
+                className="w-full p-2 border border-white-300 rounded mb-6 text-white bg-[#521573]"
             />
 
             {loading && <p>Loading exercises...</p>}
@@ -105,7 +105,7 @@ const WorkoutsPage = () => {
                 {currentExercises.map((exercise) => (
                     <div
                         key={exercise.id}
-                        className={`p-5 border bg-gradient-to-r from-[#5d2768] to-[#8005b5] text-white border-gray-200 rounded shadow cursor-pointer ${selectedExercise && selectedExercise.id === exercise.id ? "h-auto" : "h-64"
+                        className={`p-5 border bg-[#521573] text-white border-gray-200 rounded shadow cursor-pointer ${selectedExercise && selectedExercise.id === exercise.id ? "h-auto" : "h-64"
                             }`}
                         onClick={() => handleExerciseClick(exercise)}
                     >
@@ -127,7 +127,7 @@ const WorkoutsPage = () => {
                         </p>
 
                         {selectedExercise && selectedExercise.id === exercise.id && (
-                            <div className="mt-4 p-4 border border-gray-300 rounded bg-[#5e136a]">
+                            <div className="mt-4 p-4 border border-gray-300 rounded bg-[#521573]">
                                 <h4 className="font-bold text-xl text-white">Instructions:</h4>
 
                                 <ul className="text-white">
